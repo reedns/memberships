@@ -1,4 +1,4 @@
 class Group < ActiveRecord::Base
-  has many :memberships
-  has_many :users, through: :memberships
+  has_many :member_associations
+  has_many :users, through: :member_associations
 end

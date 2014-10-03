@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
@@ -24,6 +25,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
+      @group.users << current_user
       redirect_to @group, notice: 'Group was successfully created.'
     else
       render :new

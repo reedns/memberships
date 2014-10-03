@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails'
 gem 'haml-rails'
 gem 'rubocop'
+gem 'devise'
 
 group :development do
   gem 'spring'

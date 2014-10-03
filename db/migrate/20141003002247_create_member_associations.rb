@@ -1,6 +1,6 @@
-class CreateMemberships < ActiveRecord::Migration
+class CreateMemberAssociations < ActiveRecord::Migration
   def change
-    create_table :memberships do |t|
+    create_table :member_associations do |t|
       t.belongs_to :user
       t.belongs_to :group
 
