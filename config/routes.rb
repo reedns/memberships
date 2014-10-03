@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :groups
   resources :users, only: [:show]
-resources :member_associations, only: [:create]
+  resources :member_associations, only: [:create]
 end
